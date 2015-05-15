@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Agrognome Web</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<a class="color1">Prueba</a>
-<%= yield %>
 
-</body>
+    <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand nav-logo" style="color: floralwhite" href="#">AGROGNOME</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Quienes somos</a></li>
+                      <li><a href="#">Contacto</a></li>
+                      <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Inicio sesion</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </body>
+
+
 </html>

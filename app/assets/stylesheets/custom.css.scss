@@ -4,3 +4,29 @@
 .field_with_errors { @extend .has-error; }
 .alert-notice { @extend .alert-info; }
 .alert-alert { @extend .alert-danger; }
+
+.inline-block{
+  float: none;
+  display: inline-block;
+  margin-right: -2px;
+
+}
+
+.text-justify{
+  text-align: justify;
+}
+nav {
+  background-color: #2E2F30;
+  color: #EFEFEF;
+}
+
+.btn-border{
+  border-color: #EFEFEF;
+}
+
+.nav-logo{
+  color: #EFEFEF;
+  font-size: 23px;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
