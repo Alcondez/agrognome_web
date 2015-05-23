@@ -30,3 +30,45 @@ nav {
   font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
 }
 
+.align-sidebar{
+  margin-right: 15%;
+  margin-left: 80%;
+}
+
+.be-grey{
+  background-color: #999999;
+}
+.no-list{
+  list-style-type: none;
+  color: #999;
+}
+
+.footer2 {
+  background: #191919;
+  padding: 15px 0;
+  color: #777;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+.footer2 a {
+  color: #aaa;
+}
+
+.footer2 a:hover {
+  color: #fff;
+}
+.footer2 p {
+  margin: 0;
+}
+
+.widget-simplenav {
+  margin-left:-5px;
+}
+.widget-simplenav a{
+  margin:0 5px;
+}
+
+footer{
+  margin-top: 400px;
+}
