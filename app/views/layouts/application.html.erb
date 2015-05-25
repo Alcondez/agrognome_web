@@ -20,14 +20,25 @@
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                      <li><a href="#">Inicio</a></li>
+                      <li><%= link_to "Home","/welcome/index", method: :get %></li>
                       <li><a href="#">Quienes somos</a></li>
                       <li><a href="#">Contacto</a></li>
-                      <li><a href="#">Preguntas Frecuentes</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-                      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Inicio sesion</a></li>
+                      <li class="notice"><%= notice %></li>
+                      <li class="alert "><%= alert %> </li>
+                      <% if usuario_signed_in? %>
+                          <li>
+                            <%=link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete%>
+                          </li>
+                          <% else %>
+                          <li><%=link_to "Iniciar Sesion", "/usuarios/sign_in" %> </li>
+                          <li><%=link_to "Registrarse", "/usuarios/sign_up" %> </li>
+
+                            <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>-->
+                            <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Inicio sesion</a></li>-->
+
+                      <%end %>
                     </ul>
                   </div>
                 </div>
@@ -36,7 +47,7 @@
           </div>
         </div>
     <!-- Body -->
-        <div class="container table-bordered">
+        <div class="container table-bordered bg-grey">
 
           <%= yield %>
         </div>

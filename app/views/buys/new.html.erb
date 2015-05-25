@@ -1,39 +1,5 @@
-<h1>Registrar compra: </h1>
-<%= form_for :buy, url: buys_path do |f| %>
-    <p>
-      <%= f.label :Proveedor %><br>
-      <%= f.text_field :id_proveedor %>
-    </p>
+<h1>Nueva compra</h1>
 
-    <p>
-      <%= f.label :Pesodecompra %> <br>
-      <%= f.text_field :peso_compra %>
-    </p>
+<%= render 'form' %>
 
-    <p>
-      <%= f.label :Monto %> <br>
-      <%= f.text_field :monto %>
-    </p>
-
-    <p>
-      <%= f.label :Unidades %> <br>
-      <%= f.text_field :unidad %>
-    </p>
-
-    <p>
-      <%= f.label :Estado %> <br>
-      <%= f.text_field :estado %>
-    </p>
-
-    <p>
-      <%= f.label :Fecha %> <br>
-      <%= f.datetime_select :fecha %>
-    </p>
-
-
-
-    <p>
-      <%= f.submit :Guardar %>
-    </p>
-
-<% end %>
+<%= link_to 'Back', buys_path %>

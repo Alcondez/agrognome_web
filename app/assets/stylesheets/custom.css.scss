@@ -4,6 +4,10 @@
 .field_with_errors { @extend .has-error; }
 .alert-notice { @extend .alert-info; }
 .alert-alert { @extend .alert-danger; }
+body {
+  background-image: image-url('background.jpg');
+  box-sizing: content-box;
+}
 
 .inline-block{
   float: none;
@@ -71,4 +75,43 @@ nav {
 
 footer{
   margin-top: 400px;
+}
+
+.text-link{
+  color: white;
+}
+
+.bg-grey{
+  background-color: #eeeeee;
+}
+
+.form-max{
+  margin-top: 15px;
+  width: 276px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  box-shadow: none;
+
+}
+//Checkbox
+.cb{
+  outline: 1px dotted #66757F;
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-color: #66757F;
+  width: auto;
+  height: auto;
+  padding: 0px;
+  margin: 3px 0px;
+  line-height: normal;
+}
+
+.margin-top{
+  margin-top: 2%;
 }
