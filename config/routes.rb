@@ -2,9 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :usuarios
   devise_for :users
-  resources :buys
+  # resources :buys
+  #
+  # resources :users
+   resources :usuarios do
+     resources :buys
+   end
 
-  resources :users
   get 'welcome/index'
   post 'welcome/index'
   post 'users/index'

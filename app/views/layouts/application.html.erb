@@ -25,12 +25,37 @@
                       <li><a href="#">Contacto</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="notice"><%= notice %></li>
-                      <li class="alert "><%= alert %> </li>
+
                       <% if usuario_signed_in? %>
+
                           <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administrar finca <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Potreros</a></li>
+                              <!--<li><a href="#">Compras</a></li>-->
+                              <li><%= link_to "Compras", usuario_path(current_usuario.id) %> </li>
+                              <li><a href="#">Ventas</a></li>
+                              <li><a href="#">Proveedores</a></li>
+                              <li><a href="#">Clientes</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reportes<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Reporte de compras</a></li>
+                              <li><a href="#">Reporte de ventas</a></li>
+                              <li><a href="#">Reporte compra/venta</a></li>
+                              <li><a href="#">Facturas</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">Configuracion de cuenta</a>
+                          </li>
+                          <li>
+
                             <%=link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete%>
                           </li>
+
                           <% else %>
                           <li><%=link_to "Iniciar Sesion", "/usuarios/sign_in" %> </li>
                           <li><%=link_to "Registrarse", "/usuarios/sign_up" %> </li>
@@ -43,6 +68,12 @@
                   </div>
                 </div>
               </nav>
+              <% if usuario_signed_in? %>
+                  <li class="list-unstyled be-white margin-bot">Has iniciado sesion como: <%= current_usuario.email%></li>
+              <%end%>
+              <li class="list-unstyled notice be-white"><%= notice %></li>
+              <li class="list-unstyled alert be-white"><%= alert %> </li>
+
             </div>
           </div>
         </div>
