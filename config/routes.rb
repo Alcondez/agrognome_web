@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+
   devise_for :usuarios
   devise_for :users
   # resources :buys
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
   # resources :users
    resources :usuarios do
      resources :buys
+     resources :sells
+     resources :customers
+     resources :providers
+     resources :paddocks
    end
 
   get 'welcome/index'
@@ -29,6 +35,10 @@ Rails.application.routes.draw do
   #   resources :products
     resources :buys
     resources :users
+    resources :sells
+    resources :customers
+    resources :providers
+    resources :paddocks
 
   # Example resource route with options:
   #   resources :products do

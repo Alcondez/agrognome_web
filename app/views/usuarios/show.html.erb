@@ -1,4 +1,4 @@
-<h1>Compras realizadas:</h1>
+<h1>Compras realizadas</h1>
 
 <table class="table table-condensed">
   <thead>
@@ -22,7 +22,7 @@
         <td><%= buy.estado %></td>
         <td><%= buy.unidad %></td>
         <td><%= buy.id_proveedor %></td>
-        <td><%= buy.id_compra %></td>
+        <td><%= buy.id %></td>
         <td><%= link_to 'Ver', buy %></td>
         <td><%= link_to 'Editar', edit_buy_path(buy) %></td>
         <td><%= link_to 'Eliminar', buy, method: :delete, data: { confirm: 'Estas seguro de realizar esta operacion?' } %></td>
@@ -33,4 +33,137 @@
 
 <%= link_to 'Nueva compra', new_buy_path, :class => "btn btn-default field_with_errors2" %>
 
+<h1>Ventas realizadas</h1>
 
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Fecha compra</th>
+    <th>Peso final</th>
+    <th>Monto</th>
+    <th>Cantidad</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @usuario.sells.each do |sell| %>
+      <tr>
+        <td><%= sell.fecha_compra %></td>
+        <td><%= sell.peso_final %></td>
+        <td><%= sell.monto %></td>
+        <td><%= sell.cantidad %></td>
+        <td><%= link_to 'Ver', sell %></td>
+        <td><%= link_to 'Editar', edit_sell_path(sell) %></td>
+        <td><%= link_to 'Eliminar', sell, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to 'Nueva venta', new_sell_path,:class => "btn btn-default field_with_errors2" %>
+<br>
+
+<h1>Clientes: </h1>
+
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Nombre cliente</th>
+    <th>Documento fiscal</th>
+    <th>Telefono</th>
+    <th>Direccion</th>
+    <th>Email</th>
+    <th>Id</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @usuario.customers.each do |customer| %>
+      <tr>
+        <td><%= customer.nombre_cliente %></td>
+        <td><%= customer.documento_fiscal %></td>
+        <td><%= customer.telefono %></td>
+        <td><%= customer.direccion %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.id %></td>
+        <td><%= link_to 'Mostrar', customer %></td>
+        <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Eliminar', customer, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo cliente', new_customer_path,:class => "btn btn-default field_with_errors2" %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Proveedores</h1>
+
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Documento fiscal</th>
+    <th>Telefono</th>
+    <th>Direccion</th>
+    <th>Email</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @usuario.providers.each do |provider| %>
+      <tr>
+        <td><%= provider.nombre %></td>
+        <td><%= provider.documento_fiscal %></td>
+        <td><%= provider.telefono %></td>
+        <td><%= provider.direccion %></td>
+        <td><%= provider.email %></td>
+        <td><%= link_to 'Mostrar', provider %></td>
+        <td><%= link_to 'Editar', edit_provider_path(provider) %></td>
+        <td><%= link_to 'Destruir', provider, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear proveedor',new_provider_path,:class => "btn btn-default field_with_errors2" %>
+
+
+<h1>Potreros</h1>
+
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>Nombre potrero</th>
+    <th>Info extra</th>
+    <th>Max cap</th>
+    <th>Capacidad actual</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @usuario.paddocks.each do |paddock| %>
+      <tr>
+        <td><%= paddock.nombre_potrero %></td>
+        <td><%= paddock.info_extra %></td>
+        <td><%= paddock.max_cap %></td>
+        <td><%= paddock.capacidad_actual %></td>
+        <td><%= link_to 'Mostrar', paddock %></td>
+        <td><%= link_to 'Editar', edit_paddock_path(paddock) %></td>
+        <td><%= link_to 'Eliminar', paddock, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear potrero', new_paddock_path,:class => "btn btn-default field_with_errors2"%>
