@@ -31,12 +31,11 @@
                           <li>
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administrar finca <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="#">Potreros</a></li>
-                              <!--<li><a href="#">Compras</a></li>-->
-                              <li><%= link_to "Compras", usuario_path(current_usuario.id) %> </li>
-                              <li><%= link_to "Ventas", usuario_path(current_usuario.id) %> </li>
-                              <li><a href="#">Proveedores</a></li>
-                              <li><a href="#">Clientes</a></li>
+                              <li><%= link_to "Potreros", usuario_paddocks_path(current_usuario.id) %> </li>
+                              <li><%= link_to "Compras", usuario_buys_path(current_usuario.id) %> </li>
+                              <li><%= link_to "Ventas", usuario_sells_path(current_usuario.id) %> </li>
+                              <li><%= link_to "Proveedores", usuario_providers_path(current_usuario.id) %> </li>
+                              <li><%= link_to "Clientes", usuario_customers_path(current_usuario.id) %> </li>
                             </ul>
                           </li>
                           <li>

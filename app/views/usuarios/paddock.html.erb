@@ -1,0 +1,31 @@
+<h1>Potreros</h1>
+<h2>Prueba </h2>
+<table>
+  <thead>
+  <tr>
+    <th>Nombre potrero</th>
+    <th>Info extra</th>
+    <th>Max cap</th>
+    <th>Capacidad actual</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @paddocks.each do |paddock| %>
+      <tr>
+        <td><%= paddock.nombre_potrero %></td>
+        <td><%= paddock.info_extra %></td>
+        <td><%= paddock.max_cap %></td>
+        <td><%= paddock.capacidad_actual %></td>
+        <td><%= link_to 'Show', paddock %></td>
+        <td><%= link_to 'Edit', edit_paddock_path(paddock) %></td>
+        <td><%= link_to 'Destroy', paddock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paddock', new_paddock_path %>
