@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+
   devise_for :usuarios
   devise_for :users
   # resources :buys
@@ -13,6 +14,9 @@ Rails.application.routes.draw do
      resources :customers
      resources :providers
      resources :paddocks
+     resources :animals
+     resources :invoices
+     resources :profiles
    end
 
   get 'welcome/index'
@@ -40,7 +44,9 @@ Rails.application.routes.draw do
     resources :customers
     resources :providers
     resources :paddocks
-
+    resources :animals
+    resources :invoices
+    resources :profiles
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -36,6 +36,7 @@
                               <li><%= link_to "Ventas", usuario_sells_path(current_usuario.id) %> </li>
                               <li><%= link_to "Proveedores", usuario_providers_path(current_usuario.id) %> </li>
                               <li><%= link_to "Clientes", usuario_customers_path(current_usuario.id) %> </li>
+                              <li><%= link_to "Animales", usuario_animals_path(current_usuario.id) %> </li>
                             </ul>
                           </li>
                           <li>
@@ -44,12 +45,10 @@
                               <li><a href="#">Reporte de compras</a></li>
                               <li><a href="#">Reporte de ventas</a></li>
                               <li><a href="#">Reporte compra/venta</a></li>
-                              <li><a href="#">Facturas</a></li>
+                              <li><%= link_to "Facturas", usuario_invoices_path(current_usuario.id) %> </li>
                             </ul>
                           </li>
-                          <li>
-                            <a href="#">Configuracion de cuenta</a>
-                          </li>
+                          <li><%= link_to "Configuracion de cuenta", usuario_profiles_path(current_usuario.id) %> </li>
                           <li>
 
                             <%=link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete%>
