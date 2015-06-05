@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Potreros</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre del potrero</th>
+      <th>Informacion</th>
+      <th>Maxima capacidad (Sugerida)</th>
+      <th>Capacidad actual</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paddocks.each do |paddock| %>
+      <tr>
+        <td><%= paddock.nombre_potrero %></td>
+        <td><%= truncate(paddock.info_extra,:length => 30, :omission => '...')  %></td>
+        <td><%= paddock.max_cap %></td>
+        <td><%= paddock.capacidad_actual %></td>
+        <td><%= link_to 'Mostrar', paddock %></td>
+        <td><%= link_to 'Editar', edit_paddock_path(paddock) %></td>
+        <td><%= link_to 'Eliminar', paddock, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo potrero', new_paddock_path,:class => "btn btn-default field_with_errors2"%>

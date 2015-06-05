@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 
+  sell_id: 
+  customer_id: 
+  fecha_factura: 2015-05-31
+  monto: 1.5
+  estado: false
+  cantidad: 1
+  nombre: 1
+  direccion: MyText
+  telefono: MyString
+
+two:
+  usuario_id: 
+  sell_id: 
+  customer_id: 
+  fecha_factura: 2015-05-31
+  monto: 1.5
+  estado: false
+  cantidad: 1
+  nombre: 1
+  direccion: MyText
+  telefono: MyString

@@ -1,0 +1,36 @@
+<h1>Compra</h1>
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Fecha compra:</strong>
+  <%= @buy.fecha_compra %>
+</p>
+
+<p>
+  <strong>Peso compra:</strong>
+  <%= @buy.peso_compra %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @buy.monto %>
+</p>
+
+<p>
+  <strong>Unidad:</strong>
+  <%= @buy.unidad %>
+</p>
+
+<p>
+  <strong>Id proveedor:</strong>
+  <%= @buy.id_proveedor %>
+</p>
+
+<p>
+  <strong>Id compra:</strong>
+  <%= @buy.id %>
+</p>
+
+<%= link_to 'Editar', edit_buy_path(@buy) %> |
+<%= link_to 'Regresar', usuario_buys_path(current_usuario.id) %>

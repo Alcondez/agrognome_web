@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Facturas</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Sell</th>
+      <th>Customer</th>
+      <th>Fecha factura</th>
+      <th>Monto</th>
+      <th>Estado</th>
+      <th>Cantidad</th>
+      <th>Nombre</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.usuario.email %></td>
+        <td><%= invoice.sell %></td>
+        <td><%= invoice.customer %></td>
+        <td><%= invoice.fecha_factura %></td>
+        <td><%= invoice.monto %></td>
+        <td><%= invoice.estado %></td>
+        <td><%= invoice.cantidad %></td>
+        <td><%= invoice.nombre %></td>
+        <td><%= invoice.direccion %></td>
+        <td><%= invoice.telefono %></td>
+        <td><%= link_to 'Show', invoice %></td>
+        <!--<td><#%= link_to 'Edit', edit_invoice_path(invoice) %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva factura', new_invoice_path %>

@@ -1,0 +1,33 @@
+<h1>Compras Realizadas</h1>
+
+<table class="table table-striped">
+  <thead>
+      <th>Fecha compra</th>
+      <th>Peso compra</th>
+      <th>Monto</th>
+      <th>Unidad</th>
+      <th>Id proveedor</th>
+      <th>Id compra</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buys.each do |buy| %>
+      <tr>
+        <td><%= buy.fecha_compra %></td>
+        <td><%= buy.peso_compra %></td>
+        <td><%= buy.monto %></td>
+        <td><%= buy.unidad %></td>
+        <td><%= buy.id_proveedor %></td>
+        <td><%= buy.id_compra %></td>
+        <td><%= link_to 'Ver', buy %></td>
+        <td><%= link_to 'Editar', edit_buy_path(buy) %></td>
+        <td><%= link_to 'Eliminar', buy, method: :delete, data: { confirm: 'Estas seguro de realizar esta operacion?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Nueva compra', new_buy_path, :class => "btn btn-default field_with_errors2" %>

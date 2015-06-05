@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 
+  nombre_potrero: MyString
+  info_extra: MyText
+  max_cap: 1
+  capacidad_actual: 1
+
+two:
+  usuario_id: 
+  nombre_potrero: MyString
+  info_extra: MyText
+  max_cap: 1
+  capacidad_actual: 1

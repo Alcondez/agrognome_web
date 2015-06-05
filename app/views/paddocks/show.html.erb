@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Potrero</h1>
+<p>
+  <strong>Nombre potrero:</strong>
+  <%= @paddock.nombre_potrero %>
+</p>
+
+<p>
+  <strong>Informacion extra:</strong>
+  <%= @paddock.info_extra %>
+</p>
+
+<p>
+  <strong>Capacidad maxima:</strong>
+  <%= @paddock.max_cap %>
+</p>
+
+<p>
+  <strong>Capacidad actual:</strong>
+  <%= @paddock.capacidad_actual %>
+</p>
+
+<%= link_to 'Editar', edit_paddock_path(@paddock) %> |
+<%= link_to 'Atras', usuario_paddocks_path(current_usuario.id) %>

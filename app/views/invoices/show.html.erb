@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @invoice.customer %>
+</p>
+
+<p>
+  <strong>Fecha factura:</strong>
+  <%= @invoice.fecha_factura %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @invoice.monto %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @invoice.estado %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @invoice.cantidad %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @invoice.nombre %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @invoice.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @invoice.telefono %>
+</p>
+
+<%= link_to 'Regresar', usuario_invoices_path(current_usuario.id) %> |
+<%= link_to 'Ver en PDF ', usuario_invoice_path(current_usuario.id,@invoice.id, :format => 'pdf') %>

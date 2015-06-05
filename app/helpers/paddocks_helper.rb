@@ -1,0 +1,2 @@
+module PaddocksHelper
+end

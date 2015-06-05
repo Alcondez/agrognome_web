@@ -1,0 +1,33 @@
+
+<p>
+  <strong>Ubicado en el potrero:</strong>
+  <%= @animal.paddock %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @animal.provider %>
+</p>
+
+<p>
+  <strong>Fecha compra:</strong>
+  <%= @animal.fecha_compra %>
+</p>
+
+<p>
+  <strong>Fecha venta:</strong>
+  <%= @animal.fecha_venta %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @animal.genero %>
+</p>
+
+<p>
+  <strong>Cria:</strong>
+  <%= @animal.cria %>
+</p>
+
+<%= link_to 'Editar', edit_animal_path(@animal) %> |
+<%= link_to 'Regresar', usuario_animals_url(current_usuario.id) %>

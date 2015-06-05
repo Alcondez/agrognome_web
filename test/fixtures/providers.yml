@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 
+  buy_id: 
+  nombre: MyString
+  documento_fiscal: MyString
+  telefono: MyString
+  direccion: MyString
+  email: MyString
+  estado: false
+
+two:
+  usuario_id: 
+  buy_id: 
+  nombre: MyString
+  documento_fiscal: MyString
+  telefono: MyString
+  direccion: MyString
+  email: MyString
+  estado: false

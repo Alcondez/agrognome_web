@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Perfil</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!--<th>Usuario</th>-->
+      <th>Nombre</th>
+      <th>Direccion</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Bsf por kg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <!--<td><%#= profile.usuario %></td>-->
+        <td><%= profile.nombre %></td>
+        <td><%= profile.direccion %></td>
+        <td><%= profile.email %></td>
+        <td><%= profile.telefono %></td>
+        <td><%= profile.bsf_por_kg %></td>
+        <td><%= link_to 'Mostrar', profile %></td>
+        <td><%= link_to 'Editar', edit_profile_path(profile) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Profile', new_profile_path %>

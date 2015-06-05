@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ventas realizadas</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Fecha compra</th>
+      <th>Peso final</th>
+      <th>Monto</th>
+      <th>Cantidad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sells.each do |sell| %>
+      <tr>
+        <td><%= sell.fecha_compra %></td>
+        <td><%= sell.peso_final %></td>
+        <td><%= sell.monto %></td>
+        <td><%= sell.cantidad %></td>
+        <td><%= link_to 'Mostrar', sell %></td>
+        <td><%= link_to 'Editar', edit_sell_path(sell) %></td>
+        <td><%= link_to 'Destruir', sell, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva venta', new_sell_path %>

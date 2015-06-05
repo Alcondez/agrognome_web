@@ -1,0 +1,26 @@
+<h1>Ventas</h1>
+<p id="notice"> <%= notice %></p>
+
+<p>
+  <strong>Fecha compra:</strong>
+  <%= @sell.fecha_compra %>
+</p>
+
+<p>
+  <strong>Peso final:</strong>
+  <%= @sell.peso_final %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @sell.monto %>
+</p>
+
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @sell.cantidad %>
+</p>
+
+<%= link_to 'Editar', edit_sell_path(@sell) %> |
+<%= link_to 'Regresar', usuario_path(current_usuario.id) %>

@@ -1,0 +1,33 @@
+<%= form_for(@paddock) do |f| %>
+  <% if @paddock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paddock.errors.count, "error") %> prohibited this paddock from being saved:</h2>
+
+      <ul>
+      <% @paddock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre_potrero %><br>
+    <%= f.text_field :nombre_potrero %>
+  </div>
+  <div class="field">
+    <%= f.label :info_extra %><br>
+    <%= f.text_area :info_extra %>
+  </div>
+  <div class="field">
+    <%= f.label :max_cap %><br>
+    <%= f.number_field :max_cap %>
+  </div>
+  <div class="field">
+    <%= f.label :capacidad_actual %><br>
+    <%= f.number_field :capacidad_actual %>
+  </div>
+  <div class="actions">
+    <%= f.submit :Guardar %>
+  </div>
+<% end %>

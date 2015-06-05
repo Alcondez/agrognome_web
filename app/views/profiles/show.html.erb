@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @profile.direccion %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @profile.telefono %>
+</p>
+
+<p>
+  <strong>Bsf por kg:</strong>
+  <%= @profile.bsf_por_kg %>
+</p>
+
+<%= link_to 'Editar', edit_profile_path(@profile) %> |
+<%= link_to 'Atras', usuario_profiles_url(current_usuario.id) %>

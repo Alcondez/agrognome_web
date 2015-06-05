@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 
+  nombre: MyString
+  direccion: MyText
+  email: MyString
+  telefono: MyString
+  bsf_por_kg: 1.5
+
+two:
+  usuario_id: 
+  nombre: MyString
+  direccion: MyText
+  email: MyString
+  telefono: MyString
+  bsf_por_kg: 1.5

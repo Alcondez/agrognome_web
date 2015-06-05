@@ -1,0 +1,29 @@
+<%= form_for(@buy) do |f| %>
+  <% if @buy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@buy.errors.count, "error") %> prohibited this buy from being saved:</h2>
+
+      <ul>
+      <% @buy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.date_select :fecha_compra, placeholder:"Fecha de la compra" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :peso_compra, placeholder:"Peso de la compra" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :monto, placeholder: "Monto de la compra" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :unidad, placeholder:"Unidades"%>
+  </div>
+  <div class="actions">
+    <%= f.submit :Guardar %>
+  </div>
+<% end %>

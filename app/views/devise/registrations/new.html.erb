@@ -1,0 +1,29 @@
+#encoding: utf-8
+<h2 class="container text-center" >Registrarse</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group field text-center">
+    <%= f.email_field :email, autofocus: true, placeholder:"Email", class: "form-control form-max text-justify" %>
+  </div>
+
+  <div class="form-group field text-center">
+    <% if @minimum_password_length %>
+    <em>(Tiene que tener almenos 8 caracteres)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off",placeholder:"Contraseña", class: "form-control form-max text-justify" %>
+  </div>
+
+  <div class="form-group field text-center">
+
+    <%= f.password_field :password_confirmation, autocomplete: "off",placeholder:"Confirmar Contraseña", class: "form-control form-max text-justify" %>
+  </div>
+
+  <div class="text-center">
+    <%= f.submit "Empezar!",class: "btn btn-default btn-lg" %>
+  </div>
+<% end %>
+<div class="text-center margin-top">
+<%= render "devise/shared/links" %>
+</div>

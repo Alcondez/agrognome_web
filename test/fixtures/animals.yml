@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 
+  paddock_id: 
+  provider_id: 
+  fecha_compra: 2015-05-30
+  fecha_venta: 2015-05-30
+  genero: false
+  cria: false
+
+two:
+  usuario_id: 
+  paddock_id: 
+  provider_id: 
+  fecha_compra: 2015-05-30
+  fecha_venta: 2015-05-30
+  genero: false
+  cria: false

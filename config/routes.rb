@@ -4,7 +4,15 @@ Rails.application.routes.draw do
 
 
   devise_for :usuarios
-  devise_for :users
+  namespace :api do
+    namespace :v1 do
+      devise_scope :usuario do
+        post 'sessions' => 'sessions#create', :as => 'login'
+        delete 'sessions' => 'sessions#destroy', :as => 'logout'
+      end
+    end
+  end
+  #devise_for :users
   # resources :buys
   #
   # resources :users

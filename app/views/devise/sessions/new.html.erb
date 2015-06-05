@@ -1,0 +1,27 @@
+<h2 class="container text-center">Iniciar sesion</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group field text-center">
+
+    <%= f.email_field :email, autofocus: true, placeholder:"Email", class: "form-control form-max text-justify" %>
+  </div>
+
+  <div class="form-group field text-center">
+
+    <%= f.password_field :password, autocomplete: "off", placeholder:"Contrasena", class: "form-control form-max text-justify" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="form-group field text-center">
+      <%= f.check_box :remember_me , class: "cb" %>
+      <%= f.label :recordarme %>
+    </div>
+  <% end -%>
+
+  <div class="actions text-center">
+    <%= f.submit "Iniciar sesion", class: "btn btn-default btn-lg" %>
+  </div>
+<% end %>
+<div class="text-center margin-top">
+<%= render "devise/shared/links" %>
+</div>
