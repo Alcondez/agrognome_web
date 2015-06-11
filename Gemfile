@@ -47,3 +47,11 @@ gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Gemas para el PDF
 gem 'prawn'
+gem 'ffi', '~> 1.9.8'
+gem 'rails_12factor'
+gem 'heroku', '~> 3.37.6'
+gem 'puma', '~> 2.11.3'
+
+
+
+
