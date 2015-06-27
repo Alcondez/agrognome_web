@@ -1,4 +1,8 @@
 class Usuario < ActiveRecord::Base
+  #Token Authenticatable
+  acts_as_token_authenticatable
+  before_save :ensure_authentication_token
+  attr_accessible :email
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -11,5 +15,4 @@ class Usuario < ActiveRecord::Base
   has_many :animals
   has_many :invoices
   has_one :profile
-
 end
