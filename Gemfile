@@ -52,6 +52,5 @@ gem 'rails_12factor'
 gem 'heroku', '~> 3.37.6'
 gem 'puma', '~> 2.11.3'
 gem 'simple_token_authentication', '~> 1.0'
-gem 'mongo'
 
 
