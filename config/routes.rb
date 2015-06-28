@@ -16,16 +16,16 @@ Rails.application.routes.draw do
   # resources :buys
   #
   # resources :users
-   resources :usuarios do
-     resources :buys
-     resources :sells
-     resources :customers
-     resources :providers
-     resources :paddocks
-     resources :animals
-     resources :invoices
-     resources :profiles
-   end
+  resources :usuarios do
+    resources :buys
+    resources :sells
+    resources :customers
+    resources :providers
+    resources :paddocks
+    resources :animals
+    resources :invoices
+    resources :profiles
+  end
 
   get 'welcome/index'
   post 'welcome/index'
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -46,15 +46,15 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-    resources :buys
-    resources :users
-    resources :sells
-    resources :customers
-    resources :providers
-    resources :paddocks
-    resources :animals
-    resources :invoices
-    resources :profiles
+  resources :buys
+  resources :users
+  resources :sells
+  resources :customers
+  resources :providers
+  resources :paddocks
+  resources :animals
+  resources :invoices
+  resources :profiles
   # Example resource route with options:
   #   resources :products do
   #     member do
