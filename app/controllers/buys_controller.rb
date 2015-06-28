@@ -1,6 +1,7 @@
 class BuysController < ApplicationController
   before_action :set_buy, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_usuario!
+
   # GET /buys
   # GET /buys.json
   def index

@@ -5,9 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Usuario</th>
-      <th>Sell</th>
-      <th>Customer</th>
+
       <th>Fecha factura</th>
       <th>Monto</th>
       <th>Estado</th>
@@ -22,9 +20,6 @@
   <tbody>
     <% @invoices.each do |invoice| %>
       <tr>
-        <td><%= invoice.usuario.email %></td>
-        <td><%= invoice.sell %></td>
-        <td><%= invoice.customer %></td>
         <td><%= invoice.fecha_factura %></td>
         <td><%= invoice.monto %></td>
         <td><%= invoice.estado %></td>
@@ -41,4 +36,4 @@
 
 <br>
 
-<%= link_to 'Nueva factura', new_invoice_path %>
+<%= link_to 'Nueva factura', new_invoice_path, :class => "btn btn-default field_with_errors2"%>
