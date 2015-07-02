@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<h1>Reporte de ventas: </h1>
+<div class="row">
+
+  <!-- Line Chart - Single Series -->
+  <div class="col-xs-6">
+    <h3>Ventas realizadas: </h3>
+    <br>
+    <%= line_chart @sells.group_by_day(:created_at,:usuario_id => current_usuario.id ).count %>
+  </div>
+
+</div>
