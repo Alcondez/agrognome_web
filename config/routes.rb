@@ -3,7 +3,13 @@ Rails.application.routes.draw do
 
 
 
+  get 'purchases_report/show'
+
+  get 'sales_report/show'
+
   devise_for :usuarios
+ #devise_for :usuarios, :controllers => { :sessions => 'usuarios/sessions'}
+
   namespace :api do
     namespace :v1 do
       devise_scope :usuario do

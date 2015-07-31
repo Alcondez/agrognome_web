@@ -1,12 +1,17 @@
 <p id="notice"><%= notice %></p>
-<h1>Reporte de compras: </h1>
+<h1 class="text-justify">Reporte de compras: </h1>
 <div class="row">
 
   <!-- Line Chart - Single Series -->
-  <div class="col-xs-6">
-    <h3>Compras realizadas: </h3>
+  <div class="text-justify">
+    <h4>Las compras realizadas se muestran en el siguiente grafico: </h4>
     <br>
-    <%= line_chart @buys.group_by_day(:created_at,:usuario_id => current_usuario.id ).count %>
+    <div class="text-justify">
+     <%= line_chart @buys.group_by_day(:created_at,:usuario_id => current_usuario.id ).count %>
+    </div>
   </div>
-
 </div>
+<br>
+<br>
+<br>
+<br>

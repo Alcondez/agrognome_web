@@ -5,6 +5,7 @@
   <title>Agrognome Web</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -42,8 +43,8 @@
                           <li>
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reportes<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="#">Reporte de compras</a></li>
-                              <li><a href="#">Reporte de ventas</a></li>
+                              <li><%= link_to "Reporte de Compras", purchases_report_show_path %> </li>
+                              <li><%= link_to "Reporte de Ventas", sales_report_show_path %> </li>
                               <li><a href="#">Reporte compra/venta</a></li>
                               <li><%= link_to "Facturas", usuario_invoices_path(current_usuario.id) %> </li>
                             </ul>
