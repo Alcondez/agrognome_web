@@ -3,21 +3,24 @@ development:
   encoding: utf8
   database: project_development
   pool: 5
-  username: giuseppe
-  password: 12345
+  port: 5433
+  username: alejandro
+  password: abc12345
 
 test: &TEST
   adapter: postgresql
   encoding: utf8
   database: project_test
   pool: 5
-  username: giuseppe
-  password: 12345
+  port: 5433
+  username: alejandro
+  password: abc12345
 
 production:
   adapter: postgresql
   encoding: utf8
   database: project_production
   pool: 5
-  username: giuseppe
-  password: 12345
+  port: 5433
+  username: alejandro
+  password: abc12345
